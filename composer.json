@@ -1,0 +1,47 @@
+{
+    "name": "spiritix/lada-cache",
+    "type": "library",
+    "description": "A Redis based, automated and scalable database caching layer for Laravel",
+    "license": "MIT",
+    "keywords": ["php","laravel","cache","caching","redis","database","eloquent","model"],
+    "authors": [
+        {
+            "name": "Matthias Isler",
+            "email": "mi@matthias-isler.ch"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "^6.0",
+        "illuminate/database": "^6.0",
+        "illuminate/redis": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "orchestra/testbench": "^4.0",
+        "mockery/mockery": "^1.2",
+        "barryvdh/laravel-debugbar": "^3.2"
+    },
+    "suggest": {
+        "barryvdh/laravel-debugbar": "Provides debug information about the cache"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spiritix\\LadaCache\\": "src/Spiritix/LadaCache/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spiritix\\LadaCache\\Tests\\": "tests/",
+            "Spiritix\\LadaCache\\Tests\\Database\\": "database/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spiritix\\LadaCache\\LadaCacheServiceProvider"
+            ]
+        }
+    }
+}
