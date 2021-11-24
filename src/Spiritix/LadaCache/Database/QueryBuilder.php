@@ -48,14 +48,14 @@ class QueryBuilder extends Builder
      * @param  Grammar             $grammar
      * @param  Processor           $processor
      * @param  QueryHandler        $handler
-     * @param  Model               $model
+     * @param  Model               $model|null
      */
     public function __construct(
         ConnectionInterface $connection,
         Grammar $grammar,
         Processor $processor,
         QueryHandler $handler,
-        Model $model
+        Model $model = null
     ) {
         parent::__construct($connection, $grammar, $processor);
 
